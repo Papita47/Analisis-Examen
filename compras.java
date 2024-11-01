@@ -10,6 +10,10 @@ class Articulo {
         this.cantidad = cantidad;
     }
 
+    public String getNombre(){
+        return nombre;
+    }
+
     @Override
     public String toString() {
         return nombre + " (Cantidad: " + cantidad + ")";
@@ -23,6 +27,17 @@ class listaCompras {
         Articulo nuevoArticulo = new Articulo(nombre, cantidad);
         listaCompras.add(nuevoArticulo);
         System.out.println("Articulo agregado: " + nuevoArticulo);
+    }
+
+    public Articulo buscarArticulo(String nombre){
+        for(Articulo articulo : listaCompras){
+            if (articulo.getNombre().equalsIgnoreCase(nombre)) {
+                System.out.println("Articulo encontrado "+ articulo);
+                return articulo;
+            }
+        }
+        System.out.println("Articulo no encontrado");
+        return null;
     }
 
     public void mostrarLista() {
