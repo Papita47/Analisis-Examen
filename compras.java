@@ -4,12 +4,14 @@ import java.util.List;
 class Articulo {
     private String nombre;
     private int cantidad;
-    private boolean estadoCompra;     
+    private boolean estadoCompra;   
+    private boolean comprado;  
 
-    public Articulo(String nombre, int cantidad, boolean estadoCompra) {
+    public Articulo(String nombre, int cantidad, boolean estadoCompra, boolean comprado) {
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.estadoCompra = estadoCompra;
+        this.comprado = comprado;
     }
 
     public String getNombre(){
@@ -19,6 +21,10 @@ class Articulo {
     public boolean isEstadoCompra(){
         return estadoCompra;
     }
+
+    public boolean isComprado() {
+		return comprado;
+	}
 
     @Override
     public String toString() {
@@ -61,6 +67,30 @@ class listaCompras {
             System.out.println("- " + articulo);
         }
     }
+
+    public static Articulo[] filtrarArticulosComprados(Articulo[] articulos) {
+
+        //Richard
+        int contador = 0;
+        for (Articulo articulo : articulos) {
+            if (articulo.isComprado()) {
+                contador++;
+            }
+        }
+
+        Articulo[] articulosComprados = new Articulo[contador];
+        int index = 0;
+
+        for (Articulo articulo : articulos) {
+            if (articulo.isComprado()) {
+                articulosComprados[index++] = articulo;
+            }
+        }
+
+        return articulosComprados;
+    }
+
+
 }
 
 public class Main {
