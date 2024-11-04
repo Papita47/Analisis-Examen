@@ -31,6 +31,9 @@ class diarioPersonal {
             System.out.println("- " + entrada);
         }
     }
+    public int mostrarUltimasEntradas() {
+    	return diario.size();
+    }
 }
 
 public class MainDiario {
