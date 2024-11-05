@@ -67,6 +67,20 @@ class listaCompras {
             System.out.println("- " + articulo);
         }
     }
+    public void ordenarArticulosAlfabeticamente() {
+        int n = listaCompras.size();
+        for (int ii = 0; ii < n - 1; ii++) {
+            for (int jj = 0; jj < n - ii - 1; jj++) {
+                if (listaCompras.get(jj).getNombre().compareToIgnoreCase(listaCompras.get(jj + 1).getNombre()) > 0) {
+                    Articulo temp = listaCompras.get(jj);
+                    listaCompras.set(jj, listaCompras.get(jj + 1));
+                    listaCompras.set(jj + 1, temp);
+                }
+            }
+        }
+        System.out.println("Artículos ordenados alfabéticamente:");
+        mostrarLista(); 
+    }
 
     public static Articulo[] filtrarArticulosComprados(Articulo[] articulos) {
 
