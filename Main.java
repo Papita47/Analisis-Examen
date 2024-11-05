@@ -52,6 +52,16 @@ class listaCompras {
         return null;
     }
 
+     public void mostrarArticulos() {
+        if (contador == 0) {
+            System.out.println("La lista está vacía.");
+        } else {
+            for (int i = 0; i < contador; i++) {
+                System.out.println((i + 1) + ". " + articulos[i]);
+            }
+        }
+    }
+
     public void filtrarArticulosPendientes(){
         System.out.println("Articulos Pendientes: ")
         for(Articulo articulo: listaCompras){
