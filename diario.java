@@ -34,7 +34,18 @@ class diarioPersonal {
     public int mostrarUltimasEntradas() {
     	return diario.size();
     }
+
+    public List<informacionDiario> FiltrarEntradasPorPlabrasClave (String palabraClave){
+        List<informacionDiario> palabrasClave = new List<>(); 
+        for (informacionDiario info : diario ){
+            String [] array = info.toString().split(": ");   
+            if ( array[1].contains(palabraClave))               
+                palabrasClave.add(info);
+        }
+        return palabrasClave;
+    }
 }
+
 
 public class MainDiario {
     public static void main(String[] args) {
