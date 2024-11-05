@@ -52,16 +52,14 @@ class listaCompras {
         return null;
     }
 
-     public void listarComprasArticulo() {
+     public void ListarArticulos() {
 
         if (contador == 0) {
-
             System.out.println("La lista está vacía.");
-
         } else {
             for (int i = 0; i < contador; i++) {
 
-                System.out.println((i + 1) + ". " + articulos[i]);
+                System.out.println((i + 1) + "; " + articulos[i]);
             }
         }
     }
