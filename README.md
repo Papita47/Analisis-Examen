@@ -4,3 +4,4 @@
 #informar que el articulo no se encuentra
 #Se agrega la funcionalidad de filtrar articulos pendientes mediante la creacion de una variable de tipo boolean para establecer si el
 #producto ya fue comprado o no.
+#04/11/2024 guillermo silva , se agrega la funcionalidad de filtrar entradas por palabras clave , retornando una lista de las coincidencias encontradas
