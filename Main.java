@@ -137,6 +137,16 @@ class listaCompras {
 
         return comprados;
     }
+    //santiago pinto//
+    public void mostrarArticulosConCantidad() {
+    if (articulos.isEmpty()) {
+        System.out.println("La lista de compras está vacía.");
+    } else {
+        System.out.println("Lista de Artículos con Cantidad:");
+        for (Articulo articulo : articulos) {
+            System.out.println(articulo.getNombre() + " - Cantidad: " + articulo.getCantidad());
+        }
+    }
 }
 
 public class Main {
