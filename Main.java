@@ -147,6 +147,16 @@ class listaCompras {
             System.out.println(articulo.getNombre() + " - Cantidad: " + articulo.getCantidad());
         }
     }
+
+    public void eliminarArticulo(String nombre) {
+        Articulo articuloAEliminar = buscarArticulo(nombre);
+        if (articuloAEliminar != null) {
+            listaCompras.remove(articuloAEliminar);
+            System.out.println("Artículo eliminado: " + articuloAEliminar);
+        } else {
+            System.out.println("No se pudo eliminar el artículo, no se encontró.");
+        }
+    }
 }
 
 public class Main {
