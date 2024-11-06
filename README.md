@@ -5,3 +5,4 @@
 #Se agrega la funcionalidad de filtrar articulos pendientes mediante la creacion de una variable de tipo boolean para establecer si el
 #producto ya fue comprado o no.
 #se agrega la funcionalidad de filtrar entradas acorde a palabras clave ingresadas por el usuario , este metodo retorna una lista de las entradas coincidentes
+#se agrego la funcion de marcar un articulo de la lista como comprado
