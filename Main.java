@@ -117,7 +117,26 @@ class listaCompras {
         return articulosComprados;
     }
 
+    // Santiago Anaya
 
+    public Articulo[] marcarArticuloComoComprado(Articulo[] articulos){
+
+        Articulo[] comprados = new Articulo[20];
+
+        for (Articulo articulo : articulos) {
+
+            if (articulo.isComprado() && articulo != null) {
+                
+                comprados = articulos;
+                return comprados;
+                
+                
+            }
+            
+        } 
+
+        return comprados;
+    }
 }
 
 public class Main {
